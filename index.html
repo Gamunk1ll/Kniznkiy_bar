@@ -7,7 +7,6 @@
   <title>КНИЖНЫЙ БАР</title>
   
   <style>
-    /* ============== ГЛОБАЛЬНЫЙ СБРОС (решает проблему белых рамок) ============== */
     * {
       margin: 0;
       padding: 0;
@@ -30,7 +29,7 @@
 
     @media (max-width: 768px) {
       html {
-        font-size: 16px; /* Фикс для iOS Safari */
+        font-size: 16px;
       }
       body {
         position: relative;
@@ -41,7 +40,6 @@
   </style>
 
   <style>
-    /* ============== ОБЩИЕ СТИЛИ ============== */
     html { scroll-behavior: smooth; }
 
     .hb-hero, .hb-hero *,
@@ -61,7 +59,6 @@
     .hb-hero select, .hb-cocktails select, .hb-concept select, .hb-formats select,
     .hb-menu select, .hb-features select, .hb-reviews select, .hb-contacts select { font: inherit; }
 
-    /* ============== КНОПКИ (Ghost) ============== */
     .hb-btn {
       display: inline-flex;
       align-items: center;
@@ -97,7 +94,7 @@
       background: rgba(245, 239, 230, 0.1);
     }
 
-    /* ============== БЛОК 1 — ОБЛОЖКА ============== */
+    /* БЛОК 1 — ОБЛОЖКА */
     .hb-hero {
       position: relative;
       width: 100%;
@@ -241,7 +238,7 @@
       .hb-hero__subtitle { font-size: 16px; }
     }
 
-    /* ============== БЛОК 2 — КОКТЕЙЛИ ============== */
+    /* БЛОК 2 — КОКТЕЙЛИ */
     .hb-cocktails {
       background: #2B2320;
       padding: 140px 0;
@@ -361,7 +358,7 @@
       .hb-cocktails__cta { margin-top: 40px; }
     }
 
-    /* ============== БЛОК 3 — КОНЦЕПЦИЯ ============== */
+    /* БЛОК 3 — КОНЦЕПЦИЯ */
     .hb-concept {
       background: #F5EFE6;
       padding: 140px 0;
@@ -448,7 +445,7 @@
       .hb-concept__body p { font-size: 17px; }
     }
 
-    /* ============== БЛОК 4 — ФОРМАТЫ ДНЯ ============== */
+    /* БЛОК 4 — ФОРМАТЫ ДНЯ */
     .hb-formats {
       position: relative;
       background: #2B2320;
@@ -584,7 +581,7 @@
       .hb-format__desc { font-size: 15px; }
     }
 
-    /* ============== БЛОК 5 — МЕНЮ (аккордеон) ============== */
+    /* БЛОК 5 — МЕНЮ */
     .hb-menu {
       background: #F5EFE6;
       padding: 140px 0;
@@ -829,7 +826,7 @@
       .hb-menu__closing-text { font-size: 16px; }
     }
 
-    /* ============== БЛОК 6 — ПРЕИМУЩЕСТВА ============== */
+    /* БЛОК 6 — ПРЕИМУЩЕСТВА */
     .hb-features {
       position: relative;
       background: #2B2320;
@@ -919,7 +916,7 @@
       .hb-feature { padding: 24px; }
     }
 
-    /* ============== БЛОК 7 — ОТЗЫВЫ ============== */
+    /* БЛОК 7 — ОТЗЫВЫ */
     .hb-reviews {
       position: relative;
       background: #F5EFE6;
@@ -1032,7 +1029,7 @@
       .hb-review__text { font-size: 17px; }
     }
 
-    /* ============== БЛОК 8 — КОНТАКТЫ ============== */
+    /* БЛОК 8 — КОНТАКТЫ */
     .hb-contacts {
       position: relative;
       background: #2B2320;
@@ -1220,27 +1217,6 @@
   </style>
 
   <style>
-    /* ============================================
-       МОБИЛЬНАЯ И ПЛАНШЕТНАЯ ОПТИМИЗАЦИЯ (патч)
-       ============================================ */
-
-    /* Страховка от горизонтального скролла */
-    .hb-hero, .hb-cocktails, .hb-concept, .hb-formats,
-    .hb-menu, .hb-features, .hb-reviews, .hb-contacts {
-      overflow-x: hidden;
-    }
-
-    /* Чистые тапы на тач-устройствах, без залипания hover и синего выделения */
-    .hb-btn, .hb-menu__toggle {
-      touch-action: manipulation;
-      -webkit-tap-highlight-color: transparent;
-    }
-    @media (hover: none) and (pointer: coarse) {
-      .hb-btn { min-height: 48px; }
-      .hb-menu__toggle { min-height: 48px; }
-    }
-
-    /* ===== ПЛАНШЕТЫ, АЛЬБОМНАЯ ОРИЕНТАЦИЯ (1024px) ===== */
     @media (max-width: 1024px) {
       .hb-hero__content { padding: 120px 60px; }
       .hb-cocktails__container,
@@ -1264,7 +1240,6 @@
       .hb-contacts__container { gap: 56px; }
     }
 
-    /* ===== ПЛАНШЕТЫ, ПОРТРЕТНАЯ ОРИЕНТАЦИЯ (уточнения к 900px) ===== */
     @media (max-width: 900px) {
       .hb-reviews__grid { grid-template-columns: 1fr; }
       .hb-review:nth-child(3) { grid-column: auto; max-width: none; margin: 0; }
@@ -1273,7 +1248,6 @@
       .hb-menu__panel-inner { padding: 8px 28px 24px; }
     }
 
-    /* ===== АККОРДЕОН МЕНЮ: чистая мобильная раскладка (640px) ===== */
     @media (max-width: 640px) {
       .hb-menu__toggle {
         position: relative;
@@ -1311,7 +1285,6 @@
       }
     }
 
-    /* ===== МАЛЕНЬКИЕ ЭКРАНЫ (iPhone SE и подобные, до 380px) ===== */
     @media (max-width: 380px) {
       .hb-hero__title { font-size: clamp(36px, 15vw, 56px); }
       .hb-hero__content { padding: 100px 20px 64px; }
@@ -1350,7 +1323,6 @@
   </style>
 
   <style>
-    /* Кнопка "Смотреть всё меню" — по центру на мобильных */
     @media (max-width: 640px) {
       .hb-cocktails__cta {
         display: flex;
@@ -1361,7 +1333,6 @@
       }
     }
 
-    /* Скрыть индикатор скролла на мобильных и планшетах, оставить на десктопе */
     @media (max-width: 900px) {
       .hb-hero__scroll {
         display: none;
@@ -1397,7 +1368,7 @@
   </div>
 </section>
 
-<!-- БЛОК 2 — ЛИТЕРАТУРНЫЕ КОКТЕЙЛИ -->
+<!-- БЛОК 2 — КОКТЕЙЛИ -->
 <section class="hb-cocktails" aria-labelledby="hb-cocktails-title">
   <div class="hb-cocktails__container">
     <header class="hb-cocktails__header">
@@ -1511,7 +1482,7 @@
   </div>
 </section>
 
-<!-- БЛОК 5 — МЕНЮ (аккордеон) -->
+<!-- БЛОК 5 — МЕНЮ -->
 <section class="hb-menu" id="menu" aria-labelledby="hb-menu-title">
   <div class="hb-menu__container">
     <header class="hb-menu__header">
